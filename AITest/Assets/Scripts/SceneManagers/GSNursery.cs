@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class NurseryManager : SceneManager {
+public class GSNursery : GameState {
 
 	// Use this for initialization
 	void Start () {

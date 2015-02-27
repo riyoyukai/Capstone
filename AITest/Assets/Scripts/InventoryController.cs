@@ -6,6 +6,7 @@ public class InventoryController : MonoBehaviour {
 	public Transform[] spots;
 
 	public void Awake(){
+		/* // for testing purposes
 		PlayerPrefs.inventory.Add(new Item());
 		PlayerPrefs.inventory.Add(new Item());
 		PlayerPrefs.inventory.Add(new Item());
@@ -14,6 +15,7 @@ public class InventoryController : MonoBehaviour {
 		PlayerPrefs.inventory.Add(new Item());
 		PlayerPrefs.inventory.Add(new Item());
 		PlayerPrefs.inventory.Add(new Item());
+		*/
 	}
 
 	public void OpenInventory(){

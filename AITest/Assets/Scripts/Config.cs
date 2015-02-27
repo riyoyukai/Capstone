@@ -3,6 +3,9 @@ using System.Collections;
 
 public static class Config{
 	public static float GRAVITY = -5;
+
+	public static int DAYS = 24 * 60 * 60; // 1 day in seconds
+	public static int HOURS = 60 * 60; // 1 hour in seconds
 	
 	public static Vector3 Pos2to3(Vector2 v2, Vector3 v3){
 		v3.x = v2.x;

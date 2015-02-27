@@ -59,10 +59,11 @@
      <Compile Include="Assets\Scripts\Notes.cs" />
      <Compile Include="Assets\Scripts\PlayerPrefs.cs" />
      <Compile Include="Assets\Scripts\Rand.cs" />
+     <Compile Include="Assets\Scripts\SceneManagers\GSNursery.cs" />
+     <Compile Include="Assets\Scripts\SceneManagers\GSPlay.cs" />
+     <Compile Include="Assets\Scripts\SceneManagers\GameState.cs" />
      <Compile Include="Assets\Scripts\SceneManagers\GameStateManager.cs" />
      <Compile Include="Assets\Scripts\SceneManagers\NavigationManager.cs" />
-     <Compile Include="Assets\Scripts\SceneManagers\NurseryManager.cs" />
-     <Compile Include="Assets\Scripts\SceneManagers\SceneManager.cs" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />

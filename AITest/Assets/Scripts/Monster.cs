@@ -30,35 +30,38 @@ public class Monster{
 	public bool hungry = false;
 	public int hunger = 100;
 	private float hungerTicker = 0;
-	private float hungerTickerMax = 1; // seconds between decrease of 1
+	private float hungerTickerMax = 1 * Config.DAYS;
 
 	public bool lonely = false;
 	public int comfort = 100;
 	private float comfortTicker = 0;
-	private float comfortTickerMax = 1;
+	private float comfortTickerMax = 8 * Config.HOURS;
 
 	public bool sleepy = false;
 	public int sleepiness = 100;
 	private float sleepinessTicker = 0;
-	private float sleepinessTickerMax = 1;
+	private float sleepinessTickerMax = 16 * Config.HOURS;
 
 	public bool bored = false;
 	public int fun = 100;
 	private float funTicker = 0;
-	private float funTickerMax = 1;
+	private float funTickerMax = 4 * Config.HOURS;
 
-	public Monster(){
-		
+	public Monster(int dependence, int rudeness, int politeness, int laziness){
+		this.dependence = dependence;
+		this.rudeness = rudeness;
+		this.politeness = politeness;
+		this.laziness = laziness;
 	}
 
 	public void Tick(){
 
-		hungerTicker -= Time.deltaTime;
+		hungerTicker--;
 		if(hungerTicker <= 0) TickHunger();
 
-		comfortTicker -= Time.deltaTime;
-		sleepinessTicker -= Time.deltaTime;
-		funTicker -= Time.deltaTime;
+		comfortTicker --;
+		sleepinessTicker --;
+		funTicker --;
 	}
 	
 	private void TickHunger(){

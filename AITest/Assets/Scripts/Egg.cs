@@ -3,23 +3,10 @@ using System.Collections;
 
 public class Egg : MonoBehaviour {
 
-
-
 	int dependence = 0;
 	int rudeness = 0;
 	int politeness = 0;
 	int laziness = 0;
-
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
 	// politeness 1, rudeness 95
 	// 2 ; 90
@@ -46,33 +33,35 @@ public class Egg : MonoBehaviour {
 	}
 	
 	public void EggAction_Ignore(){
-		monsterInEgg.dependence--;
+		dependence--;
+	}
+		
+	public void EggAction_Pet(){
+		dependence++;
 	}
 	
 	public void EggAction_Shake(){
-		monsterInEgg.rudeness++;
-		monsterInEgg.politeness--;
+		rudeness++;
+		politeness--;
 	}
 	
 	public void EggAction_Poke(){
-		monsterInEgg.rudeness--;
-		monsterInEgg.politeness++;
-	}
-
-
-	public void EggAction_Pet(){
-		monsterInEgg.dependence++;
+		rudeness--;
+		politeness++;
 	}
 	
 	public void EggAction_Warm(){
-		monsterInEgg.laziness++;
+		laziness++;
+		if(laziness > 99) laziness = 99;
 	}
 	
 	public void EggAction_Cool(){
-		monsterInEgg.laziness--;
+		laziness--;
+		if(laziness < 1) laziness = 1;
 	}
 	
 	public void Hatch(){
-		PlayerPrefs.monsters.Add(new Monster());
+		PlayerPrefs.monsters.Add(new Monster(dependence, rudeness, politeness, laziness));
+		GameStateManager.SwitchTo ("GSPlay");
 	}
 }

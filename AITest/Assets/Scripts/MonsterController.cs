@@ -8,7 +8,7 @@ public enum Behaviors{
 
 public class MonsterController : MonoBehaviour {
 	public GameObject targetBall;
-	Monster monster = new Monster ();
+	Monster monster = PlayerPrefs.activeMonster;
 
 	float width = 0;
 	float height = 0;
