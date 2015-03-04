@@ -1,13 +1,15 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Monster.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ItemController.cs">
     <Files>
-      <File FileName="Assets\Scripts\Egg.cs" Line="65" Column="40" />
-      <File FileName="Assets\Scripts\Notes.cs" Line="19" Column="36" />
-      <File FileName="Assets\Scripts\Monster.cs" Line="33" Column="35" />
-      <File FileName="Assets\Scripts\SceneManagers\NavigationManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\SceneManagers\GameState.cs" Line="14" Column="39" />
-      <File FileName="Assets\Scripts\Config.cs" Line="8" Column="57" />
+      <File FileName="Assets\Scripts\UGUIMenu.cs" Line="7" Column="40" />
+      <File FileName="Assets\Scripts\Item.cs" Line="16" Column="19" />
+      <File FileName="Assets\Scripts\ItemController.cs" Line="13" Column="15" />
+      <File FileName="Assets\Scripts\InventoryController.cs" Line="11" Column="44" />
+      <File FileName="Assets\Scripts\SceneManagers\GSPlay.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MonsterController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Notes.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Config.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

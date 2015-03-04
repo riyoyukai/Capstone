@@ -25,6 +25,10 @@ public class Notes : MonoBehaviour {
 	 * monster prefab that is generic and depending on what monster you pick,
 	 * it loads artwork and decides behavior timers and stuff
 	 * 
+	 * For inventory movement
+	 * drag button/image UI component, if it's off the inventory area,
+	 * raycast and instantiate gameobject where your mouse is
+	 * 
 	 * 
 	 */
 

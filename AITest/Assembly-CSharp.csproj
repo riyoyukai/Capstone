@@ -64,6 +64,7 @@
      <Compile Include="Assets\Scripts\SceneManagers\GameState.cs" />
      <Compile Include="Assets\Scripts\SceneManagers\GameStateManager.cs" />
      <Compile Include="Assets\Scripts\SceneManagers\NavigationManager.cs" />
+     <Compile Include="Assets\Scripts\UGUIMenu.cs" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />

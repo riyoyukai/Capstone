@@ -7,7 +7,6 @@ public enum Behaviors{
 }
 
 public class MonsterController : MonoBehaviour {
-	public GameObject targetBall;
 	Monster monster = PlayerPrefs.activeMonster;
 
 	float width = 0;
@@ -83,7 +82,7 @@ public class MonsterController : MonoBehaviour {
 		Array values = Behaviors.GetValues(typeof(Behaviors));
 		state = (Behaviors)Rand.ChooseOne (values);
 		behaviorTimer = Rand.Range(behaviorTimerMin, behaviorTimerMax);
-		print ("My state is: " + state.ToString () + ", Next behavior in " + behaviorTimer + " seconds");
+		//print ("My state is: " + state.ToString () + ", Next behavior in " + behaviorTimer + " seconds");
 		
 		StartBehavior();
 	}
@@ -104,10 +103,6 @@ public class MonsterController : MonoBehaviour {
 		target.x = Rand.Range (min.x, max.x);
 
 		target.y = transform.position.y;
-		Vector3 targetBallPosition = targetBall.transform.position;
-		targetBallPosition.x = target.x;
-		targetBallPosition.y = target.y;
-		targetBall.transform.position = targetBallPosition;
 
 		if(transform.position.x < target.x) direction = right;
 		else direction = left;

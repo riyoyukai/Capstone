@@ -6,21 +6,14 @@ public class InventoryController : MonoBehaviour {
 	public Transform[] spots;
 
 	public void Awake(){
-		/* // for testing purposes
-		PlayerPrefs.inventory.Add(new Item());
-		PlayerPrefs.inventory.Add(new Item());
-		PlayerPrefs.inventory.Add(new Item());
-		PlayerPrefs.inventory.Add(new Item());
-		PlayerPrefs.inventory.Add(new Item());
-		PlayerPrefs.inventory.Add(new Item());
-		PlayerPrefs.inventory.Add(new Item());
-		PlayerPrefs.inventory.Add(new Item());
-		*/
+		 // for testing purposes
+		PlayerPrefs.inventory.Add(new Item("ball"));
+		PlayerPrefs.inventory.Add(new Item("food"));
 	}
 
 	public void OpenInventory(){
-		this.enabled = !this.enabled;
-		this.gameObject.SetActive(this.enabled);
+		this.gameObject.SetActive(!this.gameObject.activeSelf);
+		print ("Toggling inventory");
 	}
 
 	public void PreviousPage(){
