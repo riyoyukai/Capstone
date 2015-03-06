@@ -7,7 +7,7 @@ public enum ItemType{
 
 public class Item {
 
-	string itemName = "";
+	public string itemName = "";
 	bool edible = false;
 	int usesleft = 1;
 	int maxuses = 1;

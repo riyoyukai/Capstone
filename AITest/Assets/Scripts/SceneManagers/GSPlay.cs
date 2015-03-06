@@ -6,17 +6,16 @@ public class GSPlay : GameState {
 	public GameObject monsterPrefab;
 	MonsterController monster;
 	public GameObject navPanel;
-	Sprite[] items;
 
 	// Use this for initialization
 	void Awake () {
 		// make monster based on PlayerPrefs.activemonster
 		Instantiate (monsterPrefab);
 		monster = GameObject.FindGameObjectWithTag ("Monster").GetComponent<MonsterController>();
+		if(Config.items == null) Config.LoadItemImages ();
 	}
 
 	void Start(){
-		items = Config.LoadItemImages ();
 	}
 
 	public void ToggleNav(){

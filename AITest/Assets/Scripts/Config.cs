@@ -4,19 +4,17 @@ using System.Collections;
 
 public static class Config{
 
-	public static Sprite[] LoadItemImages(){
+	public static Sprite[] items;
+
+	public static void LoadItemImages(){
 		// TODO: loads all item images and returns to be stored nonstatically in whichever gamestate, called in awake
 		string folder = Directory.GetCurrentDirectory() + @"\Assets\Resources\Items\";
 		string[] files = Directory.GetFiles (folder, "*.jpg");
-		Sprite[] sprites = new Sprite[files.Length];
-		for(int i = 0; i < files.Length; i++){
-			
+		items = new Sprite[files.Length];
+		for(int i = 0; i < files.Length; i++){			
 			files[i] = Path.GetFileName(files[i]).Split('.')[0];
-			Debug.Log ("File: " + files[i]);
-			Sprite sp = Resources.Load<Sprite>("Items/" + files[i]);
-			Debug.Log(sp/*sprites[i]*/);
+			items[i] = Resources.Load<Sprite>("Items/" + files[i]);
 		}
-		return sprites;
 	}
 
 	public static float GRAVITY = -5;
