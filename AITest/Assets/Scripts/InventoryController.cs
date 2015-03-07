@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class InventoryController : MonoBehaviour {
 
-	public Transform[] spots;
+	public Image[] spots;
 	int page = 0;
 
 	void Awake(){
@@ -18,8 +19,9 @@ public class InventoryController : MonoBehaviour {
 			for(int j = 0; j < Config.items.Length; j++){
 				if(PlayerPrefs.inventory[i].itemName == Config.items[j].name){
 					print ("MATCH: " + PlayerPrefs.inventory[i].itemName);
-					//TODO: set button text as item name
-					//TODO: set image sprite to sprite
+					spots[i].sprite = Config.items[j];
+					spots[i].gameObject.GetComponentInChildren<Text>().text = Config.items[j].name;
+					continue;
 				}
 			}
 		}
