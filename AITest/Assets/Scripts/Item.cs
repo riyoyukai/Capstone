@@ -11,6 +11,7 @@ public class Item {
 	bool edible = false;
 	int usesleft = 1;
 	int maxuses = 1;
+	public bool inInventory = true;
 
 	public Item(string name){
 		itemName = name;
