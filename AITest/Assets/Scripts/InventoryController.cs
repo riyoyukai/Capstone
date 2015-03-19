@@ -14,6 +14,7 @@ public class InventoryController : MonoBehaviour {
 	public Vector2 playAreaMin;
 	public Vector2 playAreaMax;
 	public Image[] spots;
+	public ItemDock[] docks;
 	int page = 1;
 
 	void Awake(){
@@ -88,7 +89,7 @@ public class InventoryController : MonoBehaviour {
 		icon.transform.position = Input.mousePosition;
 		if(icon.transform.position.x > playAreaMin.x && icon.transform.position.x < playAreaMax.x &&
 		   icon.transform.position.y < playAreaMin.y && icon.transform.position.y > playAreaMax.y){
-			print ("Within area");
+			//print ("Within area");
 			//TODO: figure out how to store a reference to which item (in playerprefs) it is
 			// from the icon
 			// set that item's inInventory value to false
@@ -96,9 +97,16 @@ public class InventoryController : MonoBehaviour {
 	}
 	
 	public void E_UpOnIcon(GameObject icon){
-		if(icon.transform.position.x > playAreaMin.x && icon.transform.position.x < playAreaMax.x &&
+		/*if(icon.transform.position.x > playAreaMin.x && icon.transform.position.x < playAreaMax.x &&
 		   icon.transform.position.y < playAreaMin.y && icon.transform.position.y > playAreaMax.y){
 
-		}
+		}else{*/
+			for(int i = 0; i < docks.Length; i++){
+				if(docks[i].IsPointWithinBounds(icon.transform.position)){
+					print ("Dropped within a dock");
+					docks[i].ReceiveItem(icon);
+				}
+			}
+		//}
 	}
 }
